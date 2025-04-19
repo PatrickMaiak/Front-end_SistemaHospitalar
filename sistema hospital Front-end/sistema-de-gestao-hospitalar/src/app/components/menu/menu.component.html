@@ -1,0 +1,21 @@
+
+<div class="container">
+  <button class="hamburger" (click)="toggleSidebar()" aria-label="Abrir menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <h1>Sistema Hospital</h1>
+</div>
+
+
+<div class="sidebar" [class.open]="sidebarAberta">
+  <ul>
+    <li><a routerLink="/admin/dashboard">Dashboard</a></li>
+    <li><a routerLink="/admin/doctor-list">Lista de Médicos</a></li>
+    <li><a routerLink="/admin/patient-list">Lista de Pacientes</a></li>
+    <li><a routerLink="/admin/medicine-list">Medicamentos</a></li>
+    <li><a routerLink="/admin/user-form">Novo Usuário</a></li>
+    <li><a routerLink="/admin/role-list">Funções</a></li>
+  </ul>
+</div>

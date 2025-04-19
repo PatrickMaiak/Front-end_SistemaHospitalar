@@ -1,0 +1,53 @@
+/* styles.css ou componente SCSS */
+.form-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .btn-salvar {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-salvar:hover {
+    background-color: #2980b9;
+  }
+  

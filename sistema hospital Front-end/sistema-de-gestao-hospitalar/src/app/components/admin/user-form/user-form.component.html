@@ -1,1 +1,33 @@
-<p>user-form works!</p>
+<!-- form-user.component.html -->
+<form class="form-container">
+    <h2 class="form-title">Cadastro de Usuário</h2>
+  
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" class="form-input" name="nome" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" class="form-input" name="email" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" class="form-input" name="senha" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="confirmarSenha">Confirmar Senha</label>
+      <input type="password" id="confirmarSenha" class="form-input" name="confirmarSenha" required />
+    </div>
+  
+    <div class="form-group">
+      <label for="funcao">Função</label>
+      
+      <app-role-list></app-role-list>
+    </div>
+  
+    <button type="submit" class="btn-salvar">Cadastrar</button>
+  </form>
+  

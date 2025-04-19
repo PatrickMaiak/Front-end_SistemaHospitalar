@@ -8,22 +8,33 @@ import { RoleListComponent } from './components/admin/role-list/role-list.compon
 import { UserFormComponent } from './components/admin/user-form/user-form.component';
 import { PrescriptionFormComponent } from './components/doctor/prescription-form/prescription-form.component';
 import { PrescriptionListComponent } from './components/doctor/prescription-list/prescription-list.component';
-import {LoginComponent} from "./components/login/login.component";
+import { LoginComponent } from "./components/login/login.component";
+import { MainComponentComponent } from './components/main-component/main-component.component';
 import { MyPrescriptionsComponent } from './components/patient/my-prescriptions/my-prescriptions.component';
 
 export const routes: Routes = [
-    {path:"", redirectTo:"login",pathMatch:'full'},
-    {path:"login", component:LoginComponent},
-    {path:"dashboard",component:DashboardComponent},
-    {path:"doctor-list",component:DoctorListComponent},
-    {path:"patient-list",component:PatientListComponent},
-    {path:"medicine-list",component:MedicineListComponent},
-    {path:"user-form",component:UserFormComponent},
-    {path:"medicine-form",component:MedicineFormComponent},
-    {path:"prescription-form",component:PrescriptionFormComponent},
-    {path:"prescription-list",component:PrescriptionListComponent},
-    {path:"my-prescription",component:MyPrescriptionsComponent},
-    {path:"role-list",component:RoleListComponent}
+    { path: "", redirectTo: "login", pathMatch: 'full' },
+    { path: "login", component: LoginComponent },
+    {path: "admin", component: MainComponentComponent, children: [
+        { path: "dashboard", component: DashboardComponent },
+        { path: "doctor-list", component: DoctorListComponent },
+        { path: "patient-list", component: PatientListComponent },
+        { path: "medicine-list", component: MedicineListComponent },
+        { path: "user-form", component: UserFormComponent },
+        { path: "medicine-form", component: MedicineFormComponent },
+        { path: "role-list", component: RoleListComponent },
+
+    ]},
+    {path:"doctor",component: MainComponentComponent, children:[
+          { path: "prescription-form", component: PrescriptionFormComponent },
+            { path: "prescription-list", component: PrescriptionListComponent },
+    ]},
+    {path:"patient",component: MainComponentComponent,children:[
+        { path: "my-prescription", component: MyPrescriptionsComponent },
+    ]},
+   
     
+  
+
 
 ];
