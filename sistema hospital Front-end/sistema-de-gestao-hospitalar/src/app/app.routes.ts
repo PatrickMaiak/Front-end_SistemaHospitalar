@@ -6,6 +6,7 @@ import { MedicineListComponent } from './components/admin/medicine-list/medicine
 import { PatientListComponent } from './components/admin/patient-list/patient-list.component';
 import { RoleListComponent } from './components/admin/role-list/role-list.component';
 import { UserFormComponent } from './components/admin/user-form/user-form.component';
+import { HomeComponent } from './components/doctor/home/home.component';
 import { PrescriptionFormComponent } from './components/doctor/prescription-form/prescription-form.component';
 import { PrescriptionListComponent } from './components/doctor/prescription-list/prescription-list.component';
 import { LoginComponent } from "./components/login/login.component";
@@ -26,10 +27,12 @@ export const routes: Routes = [
 
     ]},
     {path:"doctor",component: MainComponentComponent, children:[
+          { path: "home", component: HomeComponent },
           { path: "prescription-form", component: PrescriptionFormComponent },
-            { path: "prescription-list", component: PrescriptionListComponent },
+        { path: "prescription-list", component: PrescriptionListComponent },
     ]},
     {path:"patient",component: MainComponentComponent,children:[
+        { path: "home", component: HomeComponent },
         { path: "my-prescription", component: MyPrescriptionsComponent },
     ]},
    
