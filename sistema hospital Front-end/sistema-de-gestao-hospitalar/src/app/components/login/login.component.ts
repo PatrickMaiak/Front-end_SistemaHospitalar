@@ -15,18 +15,26 @@ export class LoginComponent {
 
   login(){
     if(this.email == 'admin' && this.password == 'admin'){
+      this.saveLocalStorage();
       this.router.navigate(['admin/dashboard'])
     }
     else if(this.email == 'patient' && this.password == 'patient'){
+      this.saveLocalStorage();
       this.router.navigate(['patient/home'])
     }
     else if(this.email == 'doctor' && this.password == 'doctor'){
+      this.saveLocalStorage();
       this.router.navigate(['doctor/home'])
+      
     }
    
     else{
       alert("senha ou usuario incorretos")
     }
+  }
+  saveLocalStorage(){
+    localStorage.setItem('role', this.email); 
+
   }
 
 }

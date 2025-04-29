@@ -10,12 +10,25 @@
 
 
 <div class="sidebar" [class.open]="sidebarAberta">
-  <ul>
+  <ul *ngIf="role === 'admin'">
     <li><a routerLink="/admin/dashboard">Dashboard</a></li>
     <li><a routerLink="/admin/doctor-list">Lista de Médicos</a></li>
     <li><a routerLink="/admin/patient-list">Lista de Pacientes</a></li>
     <li><a routerLink="/admin/medicine-list">Medicamentos</a></li>
     <li><a routerLink="/admin/user-form">Novo Usuário</a></li>
     <li><a routerLink="/admin/role-list">Funções</a></li>
+    <li><a href="login">Sair</a></li>
+    
   </ul>
-</div>
+  
+  <ul *ngIf="role === 'doctor'">
+    <li><a routerLink="/doctor/home">Início</a></li>
+    <li><a routerLink="/doctor/prescription-form">Nova Prescrição</a></li>
+    <li><a routerLink="/doctor/prescription-list">Minhas Prescrições</a></li>
+  </ul>
+  
+  <ul *ngIf="role === 'patient'">
+    <li><a routerLink="/patient/home">Início</a></li>
+    <li><a routerLink="/patient/my-prescription">Minhas Receitas</a></li>
+  </ul>
+  

@@ -27,8 +27,8 @@ export const routes: Routes = [
 
     ]},
     {path:"doctor",component: MainComponentComponent, children:[
-          { path: "home", component: HomeComponent },
-          { path: "prescription-form", component: PrescriptionFormComponent },
+        { path: "home", component: HomeComponent },
+        { path: "prescription-form", component: PrescriptionFormComponent },
         { path: "prescription-list", component: PrescriptionListComponent },
     ]},
     {path:"patient",component: MainComponentComponent,children:[
