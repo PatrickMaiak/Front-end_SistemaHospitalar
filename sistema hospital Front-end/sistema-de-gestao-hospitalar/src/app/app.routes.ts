@@ -23,7 +23,7 @@ export const routes: Routes = [
         { path: "medicine-list", component: MedicineListComponent },
         { path: "user-form", component: UserFormComponent },
         { path: "medicine-form", component: MedicineFormComponent },
-        { path: "role-list", component: RoleListComponent },
+        
 
     ]},
     {path:"doctor",component: MainComponentComponent, children:[

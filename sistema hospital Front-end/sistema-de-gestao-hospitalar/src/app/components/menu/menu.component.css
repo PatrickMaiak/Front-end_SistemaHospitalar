@@ -70,3 +70,16 @@
     margin: 20px 0;
   }
   
+  li a{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: large;
+
+  }
+  li a:hover{
+    text-shadow: rgba(0, 0, 0, 0.313) 1px 1px ;
+    color:  rgb(0, 192, 118);
+    
+  }

@@ -1,1 +1,33 @@
-<p>doctor-list works!</p>
+<div class="tabela-container">
+    <div class="tabela-header">
+        <h2>Lista de Usuários</h2>
+        <a href="/admin/user-form" class="botao-adicionar">Adicionar</a>
+    </div>
+
+    <table class="tabela-usuarios">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Função</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(user of lista; track $index){
+            <tr>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.role.name}}</td>
+                <td>
+                    <button class="botao-editar">Editar</button>
+                    <button class="botao-deletar">Deletar</button>
+                </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</div>

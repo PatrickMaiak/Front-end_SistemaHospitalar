@@ -11,24 +11,25 @@
 
 <div class="sidebar" [class.open]="sidebarAberta">
   <ul *ngIf="role === 'admin'">
-    <li><a routerLink="/admin/dashboard">Dashboard</a></li>
-    <li><a routerLink="/admin/doctor-list">Lista de Médicos</a></li>
-    <li><a routerLink="/admin/patient-list">Lista de Pacientes</a></li>
-    <li><a routerLink="/admin/medicine-list">Medicamentos</a></li>
-    <li><a routerLink="/admin/user-form">Novo Usuário</a></li>
-    <li><a routerLink="/admin/role-list">Funções</a></li>
+    <li><a href="/admin/dashboard">Dashboard</a></li>
+    <li><a href="/admin/doctor-list">Lista de Médicos</a></li>
+    <li><a href="/admin/patient-list">Lista de Pacientes</a></li>
+    <li><a href="/admin/medicine-list">Medicamentos</a></li>
+    <li><a href="/admin/user-form">Novo Usuário</a></li>
     <li><a href="login">Sair</a></li>
     
   </ul>
   
   <ul *ngIf="role === 'doctor'">
-    <li><a routerLink="/doctor/home">Início</a></li>
-    <li><a routerLink="/doctor/prescription-form">Nova Prescrição</a></li>
-    <li><a routerLink="/doctor/prescription-list">Minhas Prescrições</a></li>
+    <li><a href="/doctor/home">Início</a></li>
+    <li><a href="/doctor/prescription-form">Nova Prescrição</a></li>
+    <li><a href="/doctor/prescription-list">Minhas Prescrições</a></li>
+    <li><a href="login">Sair</a></li>
   </ul>
   
   <ul *ngIf="role === 'patient'">
-    <li><a routerLink="/patient/home">Início</a></li>
-    <li><a routerLink="/patient/my-prescription">Minhas Receitas</a></li>
+    <li><a href="/patient/home">Início</a></li>
+    <li><a href="/patient/my-prescription">Minhas Receitas</a></li>
+    <li><a href="login">Sair</a></li>
   </ul>
   
